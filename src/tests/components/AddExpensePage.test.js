@@ -6,10 +6,10 @@ import expenses from '../fixtures/expenses';
 let wrapper, history, addExpense;
 
 beforeEach(() => {
-    const addExpense = jest.fn();
-    const history = { push: jest.fn() };
-    const wrapper = shallow(<AddExpensePage addExpense={addExpense} history={history} />);
-})
+    addExpense = jest.fn();
+    history = { push: jest.fn() };
+    wrapper = shallow(<AddExpensePage addExpense={addExpense} history={history} />);
+});
 
 test('should render AddExpensePage correctly', () => {
     expect(wrapper).toMatchSnapshot();
